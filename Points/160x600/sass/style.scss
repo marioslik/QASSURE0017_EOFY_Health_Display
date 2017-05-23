@@ -1,0 +1,532 @@
+@charset "UTF-8";
+/* CSS Document */
+@import "normalize";
+$width: 160;
+$height: 600;
+$bannerWidth: $width + px;
+$bannerHeight: $height + px;
+@font-face {
+    font-family: 'Ciutadella-Medium';
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.eot');
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.eot?#iefix') format('embedded-opentype'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.woff2') format('woff2'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.woff') format('woff'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_0_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'Ciutadella-Regular';
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.eot');
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.eot?#iefix') format('embedded-opentype'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.woff2') format('woff2'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.woff') format('woff'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_1_0.ttf') format('truetype');
+}
+@font-face {
+    font-family: 'CiutadellaRounded-Rg';
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.eot');
+    src: url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.eot?#iefix') format('embedded-opentype'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.woff2') format('woff2'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.woff') format('woff'), url('https://s3-ap-southeast-2.amazonaws.com/qantasfiles/ciutadella/31E6EC_2_0.ttf') format('truetype');
+}
+
+body {
+    font-family: 'Ciutadella-regular', sans-serif;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    position: relative;
+    overflow: hidden;
+}
+
+.copy {
+    font-family: 'Ciutadella-regular', sans-serif;
+    color: #fff;
+}
+
+.font-regular {
+    font-family: 'Ciutadella-regular', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.font-medium {
+    font-family: 'Ciutadella-Medium', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.font-rounded {
+    font-family: 'CiutadellaRounded-Rg', sans-serif;
+    text-rendering: optimizeLegibility;
+}
+
+.copy {
+    font-family: 'Ciutadella-regular', sans-serif;
+    color: #fff;
+}
+
+p,
+span {
+    display: block;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+    -webkit-margin-start: 0;
+    -webkit-margin-end: 0;
+    margin: 0;
+}
+
+button {
+    -webkit-appearance: none;
+    cursor: pointer;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    -webkit-border-radius: 26px;
+    -moz-border-radius: 26px;
+    border-radius: 26px;
+    padding: 7px 20px 5px;
+    font-size: 15px;
+    line-height: 18px;
+    outline: none;
+}
+
+button.hover,
+button:hover {
+    background: white;
+    color: #ee0000;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 31px;
+    line-height: 32px;
+}
+
+h2 {
+    font-size: 19px;
+}
+
+h3 {
+    font-size: 13px;
+}
+
+h4 {
+    font-size: 25px;
+}
+
+.container {
+    display: none;
+    width: ($width - 2)+px;
+    height: ($height - 2)+px;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    border: 1px solid #e2e2e2;
+    background-color: #f5f5f5;
+}
+
+.loader {
+    margin-left: auto;
+    margin-right: auto;
+    width: 158px;
+    height: 598px;
+    top: 0;
+    left: 0;
+    border: 1px solid #e2e2e2;
+    position: relative;
+    background-color: #f5f5f5;
+}
+
+.loader img {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 275px;
+    left: 55px;
+}
+
+.banner {
+    position: absolute;
+    width: ($width - 2)+px;
+    height: ($height - 2)+px;
+    top: 0;
+    left: 0;
+    margin: 0 auto;
+    background-color: #F5F5F5;
+    clip: rect(0px, 300px, $bannerHeight, 0px);
+    overflow: hidden;
+}
+
+.frame-content p {
+    font-size: 26px;
+    line-height: 28px;
+    text-align: center;
+    color: white;
+    text-rendering: optimizeLegibility;
+}
+
+#messaging-frame-01 {
+    position: absolute;
+    z-index: 200;
+    width: 140px;
+    top: 180px;
+    left: 10px;
+    color:#ffffff;
+    p {
+        font-size:18px;
+        line-height:20px;
+    }
+    .points-container {
+        position:relative;
+        left:0px;
+    }
+    .with {
+        position: absolute;
+        left:48px;
+        top:-20px;
+    }
+    .points-copy {
+        -webkit-font-smoothing: initial;
+        position:relative;
+        left:-15px;
+        font-weight:600;
+        font-size:48px;
+        bottom:3px;
+        margin-bottom:17px;
+    }
+    .thousands-countdown,
+    .hundreds-countdown {
+        display: inline;
+    }
+    .thousands-countdown {
+        position: absolute;
+        text-align: right;
+        right: 74px;
+    }
+    .comma-countdown {
+        position: relative;
+        display: inline;
+        left: 65px;
+        top:3px;
+    }
+    .hundreds-countdown {
+        position: absolute;
+        text-align: left;
+        left: 74px;
+    }
+    .bonus {
+        position: absolute;
+        right:2px;
+        top:9px;
+    }
+    #qantas-points {
+        position:relative;
+        bottom:25px;
+        font-size:22px;
+        font-weight:600;
+    }
+}
+
+#messaging-frame-02 {
+    position: absolute;
+    z-index: 200;
+    width: 140px;
+    top: 170px;
+    left: 10px;
+    p {
+        font-size: 20px;
+        line-height: 23px;
+    }
+}
+
+#messaging-endframe {
+    position: absolute;
+    z-index: 200;
+    width: 140px;
+    top: 110px;
+    left: 10px;
+    color: white;
+    p {
+        font-size:26px;
+        line-height:27px;
+    }
+}
+
+#subtext {
+    margin-top:30px;
+    font-size:15px;
+    text-align:center;
+}
+
+.messaging-bracket {
+    font-size: 13px;
+    color:#ffffff;
+    position:absolute;
+    left:7px;
+    margin-top:5px;
+}
+
+.tilde {
+  position:relative;
+  top:-5px;
+
+}
+
+.end-bracket {
+  position:relative;
+  display: inline-block;
+  right:-9px;
+}
+
+
+// LOGOS
+#logos-container {
+    position: absolute;
+    z-index: 200;
+    left: 15px;
+    bottom: 113px;
+}
+
+.logo-qantas {
+    position: absolute;
+    width: 110px;
+    height: 72px;
+    left: 9px;
+    top: 33px;
+    z-index: 300;
+}
+
+.qantas-logo-white {
+    position: absolute;
+    width: 110px;
+    height: 72px;
+    left: 9px;
+    top: 5px;
+    z-index: 301;
+}
+
+.logo-partner {
+    position: absolute;
+    height: 23px;
+    left: 16px;
+    top: -3px;
+    overflow:hidden;
+}
+
+.card {
+    position: absolute;
+    width: 90px;
+    left: 19px;
+    top: -75px;
+}
+
+#cta-button {
+    position: absolute;
+    display: block;
+    left: 13px;
+    margin-top: 15px;
+}
+
+.terms {
+    display: block;
+    position: absolute;
+    color:darkgrey;
+    z-index: 8001;
+    width: 150px;
+    text-align: left;
+    letter-spacing: -0.2px;
+    left: 5px;
+    bottom: 6px;
+    font-size: 9px;
+    line-height: 9px;
+    font-family: Arial, sans-serif;
+    cursor: pointer;
+}
+
+.tilde-terms {
+  position:relative;
+  bottom:2px;
+  display:inline-block;
+}
+
+.asterisk {
+    font-family: 'Ciutadella-Regular';
+    display: inline-block;
+    font-size: 18px;
+    position: absolute;
+    top:186px;
+    left:121px;
+    color: #ffffff;
+}
+
+.tilde {
+    font-family: 'Ciutadella-Regular';
+    display: inline-block;
+    font-size: 18px;
+    position: absolute;
+}
+
+// Intro Shapes
+.shapes {
+    position: absolute;
+    top: 150px;
+    left: -70px;
+    width: 300px;
+    height: 250px;
+    z-index: 6500;
+    pointer-events: none;
+}
+
+#mask-shape {
+    position: absolute;
+    width: 6866px;
+    height: 4833px;
+    top: -1000px;
+    left: -1000px;
+    z-index: 6500;
+}
+
+#blue-shape {
+    position: absolute;
+    width: 113px;
+    height: 111px;
+    top: 0;
+    left: 0;
+    z-index: 6900;
+}
+
+#blue-shape-small {
+    position: absolute;
+    width: 64px;
+    height: 68px;
+    top: 0;
+    left: 0;
+    z-index: 6900;
+}
+
+// Base Shapes
+#base-red {
+    position: absolute;
+    z-index: 105;
+    left: -70px;
+    top: 0;
+    width: 300px;
+    height: 600px;
+}
+
+#partnership-white-shape-small {
+    position: absolute;
+    z-index: 112;
+    left: -350px;
+    top: 330px;
+    width: 838px;
+    height: 462px;
+}
+
+#partnership-white-shape {
+    position: absolute;
+    z-index: 112;
+    left: -270px;
+    top: 185px;
+    width: 650px;
+    height: 540px;
+}
+
+#red-gradient {
+    position: absolute;
+    z-index: 100;
+    left: -70px;
+    top: 0;
+    width: 838px;
+    height: 462px;
+}
+
+#solid-red-base {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 600px;
+    background-color: #d00914;
+    z-index: 0;
+}
+
+// Base Images
+.bg-image {
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    top: 0;
+    left: 0;
+    margin: auto;
+    z-index: 100;
+}
+
+.bg-image-01 {
+    position: absolute;
+    z-index: 130;
+}
+
+.bg-image-02 {
+    position: absolute;
+    z-index: 131;
+}
+
+.clicktag {
+    cursor: pointer;
+}
+
+.overlay {
+    position: absolute;
+    width: 120px;
+    height: 570px;
+    top: 10px;
+    left: 10px;
+    background-color: white;
+    z-index: 9999;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    display: none;
+}
+
+.overlay h6 {
+    font-size: 16px;
+    color: #E0001A;
+}
+
+.overlay-close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 34px;
+    height: 38px;
+    cursor: pointer;
+}
+
+.overlay-close img {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    left: 13px;
+    top: 13px;
+}
+
+.overlay-close:hover img {
+    width: 10px;
+    height: 10px;
+    opacity: 0.7;
+}
+
+.overlay-body {
+    font-size: 10px;
+    padding-top: 8px;
+    font-family: 'Ciutadella-Regular';
+    line-height: 14px;
+    max-height: 520px;
+    overflow-y: scroll;
+}
+
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+    button {
+        padding: 7px 20px 7px;
+    }
+}
