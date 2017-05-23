@@ -70,7 +70,8 @@ function initCSS() {
 
     $('.clicktag').click(function(){
         console.log('clicktag invoked');
-        Enabler.exitOverride('clickthrough', clickTag);
+        window.open(clickTag);
+        //Enabler.exitOverride('clickthrough', clickTag);
     });
 }
 
