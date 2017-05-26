@@ -38,11 +38,6 @@ function initCSS() {
     TweenLite.set($("#logos-container"), {y:-4});
     TweenLite.set(".bg-wrapper", {perspective:800});
 
-
-    $('#messaging-frame-01 p').html('Don’t<br>have<br>hospital<br>cover?');
-    $('#messaging-frame-02 p').html('Join by 30 June after your 31st birthday and you could avoid the Lifetime Health Cover loading');
-    $('#cta-button').html('Join today');
-
     $( ".banner" ).hover(
         function() {
             $("#cta-button").addClass('hover');
@@ -66,14 +61,13 @@ function initCSS() {
     }else{
         $('.terms').click(function(){
           console.log('clicktag invoked');
-          Enabler.exitOverride('clickthrough', clickTag);
+          window.open(clickTag);
       });
     }
 
     $('.clicktag').click(function(){
         console.log('clicktag invoked');
         window.open(clickTag);
-        //Enabler.exitOverride('clickthrough', clickTag);
     });
 }
 
@@ -91,6 +85,9 @@ function startAnimation() {
 
     bannerWidth = $(".container").width();
     bannerHeight = $(".container").height();
+
+    var mySplitText = new SplitText("#frame-02-word-04", {type:"words,chars"});
+    var chars = mySplitText.chars;
 
     tl = new TimelineLite();
 
@@ -128,7 +125,17 @@ function startAnimation() {
     tl.add("frame02", 4);
 
     tl.to("#messaging-frame-01", 0.8, {alpha: 0, y: 0, ease: Power1.easeOut}, "frame02+=.3");
-    tl.from("#messaging-frame-02", 2, {alpha: 0, y: 0, ease: Power1.easeInOut}, "frame02+=0.3");
+    // tl.from("#messaging-frame-02", 2, {y: -20, ease: Power1.easeInOut}, "frame02+=0.3");
+
+    tl.from("#frame-02-word-01", 1.5, {alpha: 0, x:-10, ease: Power1.easeInOut}, "frame02+=0.3");
+    tl.from("#frame-02-word-02", 1.5, {alpha: 0, x:10, ease: Power1.easeInOut}, "frame02+=0.4");
+    tl.from("#frame-02-word-03", 1.5, {alpha: 0, y: -10, ease: Power1.easeInOut}, "frame02+=0.7");
+    // tl.from("#frame-02-word-04", 1.5, {alpha: 0, y: 0, ease: Power1.easeInOut}, "frame02+=1.5");
+    tl.staggerFrom(chars, 0.5, {alpha:0, x:-10, rotationY:360, transformOrigin:"50% 50%", ease:Sine.easeOut}, 0.05, "frame02+=1.4");
+    tl.from("#frame-02-word-05", 1.5, {alpha: 0, y: -5, ease: Power1.easeInOut}, "frame02+=2.2");
+    tl.from("#frame-02-word-06", 1.5, {alpha: 0, y: -5, ease: Power1.easeInOut}, "frame02+=2.3");
+    tl.from("#frame-02-word-07", 1.5, {alpha: 0, y: -5, ease: Power1.easeInOut}, "frame02+=2.4");
+    tl.from("#frame-02-word-08", 1.5, {alpha: 0, y: -5, ease: Power1.easeInOut}, "frame02+=2.5");
 
     //END FRAME  ------------------------------------------------
     tl.add("endframe", 10);

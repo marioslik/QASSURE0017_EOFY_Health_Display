@@ -2,3 +2,5 @@ node_modules/
 build
 deploy
 */node_modules/
+-LHCL/*
+*.zip

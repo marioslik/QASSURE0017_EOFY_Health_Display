@@ -179,13 +179,37 @@ h4 {
     position: absolute;
     z-index: 200;
     width: 260px;
-    top: 45px;
+    top: 35px;
     left: 20px;
+    text-align:center;
     p {
         -webkit-font-smoothing: antialiased;
-        font-size:23px;
-        line-height:26px;
-        margin-bottom:15px;
+        font-size:22px;
+        line-height:29px;
+    }
+    #frame-02-word-01 {
+        position:relative;
+        display:inline;
+    }
+    #frame-02-word-02 {
+        position:relative;
+        display:inline;
+        font-weight:600;
+    }
+    #frame-02-word-03 {
+        position:relative;
+        display:inline;
+    }
+    #frame-02-word-04 {
+        position:relative;
+        font-weight:600;
+        font-size:32px;
+    }
+    #frame-02-word-05 {
+        position:relative;
+    }
+    #frame-02-word-06 {
+        position:relative;
     }
 }
 

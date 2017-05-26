@@ -60,13 +60,13 @@ function initCSS() {
     }else{
         $('.terms').click(function(){
           console.log('clicktag invoked');
-          Enabler.exitOverride('clickthrough', clickTag);
+          window.open(clickTag);
       });
     }
 
     $('.clicktag').click(function(){
         console.log('clicktag invoked');
-        Enabler.exitOverride('clickthrough', clickTag);
+        window.open(clickTag);
     });
 }
 
